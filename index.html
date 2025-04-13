@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel Route Planner</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"/>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <div class="container">
+    <h2>OpenStreetMap Travel Route Planner</h2>
+    <div class="controls">
+      <label>From: <input type="text" id="from" placeholder="Enter start location" /></label>
+      <label>To: <input type="text" id="to" placeholder="Enter destination" /></label>
+      <button onclick="geocodeAndRoute()">Find Route</button>
+    </div>
+    <div id="map"></div>
+
+    <button onclick="viewMyBookings()">View My Bookings</button>
+<div class="my-bookings"></div>
+
+  </div>
+  <!-- User Info Bar -->
+<div id="userInfo" class="user-info-top"></div>
+
+<!-- Login Modal -->
+<div id="loginModal" class="login-modal">
+  <div class="login-box">
+    <h3>Login</h3>
+    <input type="email" id="emailInput" placeholder="Enter your email" />
+    <button onclick="login()">Login</button>
+  </div>
+</div>
+
+  
+  
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
